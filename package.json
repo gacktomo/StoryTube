@@ -1,0 +1,26 @@
+{
+  "scripts": {
+    "watch": "webpack --watch --progress",
+    "build": "webpack-cli -p",
+    "dev": "webpack-dev-server --open"
+  },
+  "devDependencies": {
+    "jquery": "^3.3.1",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
+  },
+  "name": "yt-story",
+  "version": "1.0.0",
+  "main": "fiddle.js",
+  "dependencies": {
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "url-loader": "^1.0.1",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
