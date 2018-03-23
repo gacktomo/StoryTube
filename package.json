@@ -1,8 +1,7 @@
 {
   "scripts": {
-    "watch": "webpack --watch --progress",
-    "build": "webpack-cli -p",
-    "dev": "webpack-dev-server --open"
+    "build": "webpack-cli -p --mode production",
+    "dev": "webpack-dev-server --open --mode development"
   },
   "devDependencies": {
     "jquery": "^3.3.1",
