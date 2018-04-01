@@ -28,7 +28,7 @@ div.stage{
         div.back{
             top: 0;
             left: 0;
-            -webkit-transform: translateZ(-100px);
+            -webkit-transform: translateZ(-100px) rotateY(180deg);
         }
         div.left{
             top: 0;
