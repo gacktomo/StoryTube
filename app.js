@@ -8,9 +8,4 @@ onload=function(){
     this.style.webkitTransform = "rotateY("+ angle +"deg)";
   };
 
-  document.getElementById("btnn").onclick = function() {
-    angle -= 90;
-    this.style.webkitTransform = "rotateY("+ angle +"deg)";
-  };
-
 }

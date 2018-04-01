@@ -1,7 +1,7 @@
 {
   "scripts": {
     "build": "webpack-cli -p --display-modules",
-    "dev": "webpack-dev-server --hot --open --mode development"
+    "dev": "webpack-dev-server --hot --host 0.0.0.0 --open --mode development"
   },
   "devDependencies": {
     "css-loader": "^0.28.11",
