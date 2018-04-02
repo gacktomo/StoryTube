@@ -1,4 +1,21 @@
 $size: 100vw;
+@mixin ctrl-btn{
+  position: fixed;
+  top: 0;
+  width: 20vw;
+  height: 100vh;
+  z-index: 1;
+  // background-color: tomato;
+}
+div.next-btn{
+  @include ctrl-btn;
+  right: 0;
+}
+div.back-btn{
+  @include ctrl-btn;
+  left: 0;
+}
+
 div.stage{
   position: relative;
   -webkit-perspective: 5000vw;
