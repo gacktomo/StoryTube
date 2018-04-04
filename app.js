@@ -14,7 +14,7 @@ back.prev  = right;
 left.next  = front;
 left.prev  = back;
 
-var v_list = ['GBlorsWgtP0','SxPzkOkEoL0',"aANfGnP4a4",];
+var v_list = [];
 var current = front;
 var page_num = 0;
 
@@ -30,7 +30,7 @@ window.onYouTubeIframeAPIReady = function() {
   right.player = new YT.Player('left', {
     height: '100%',
     width: '100%',
-    videoId: 'SxPzkOkEoL0',
+    videoId: 'dupiBO-U0P4',
     playerVars: { autoplay: 0, controls: 0, playsinline: 1, rel: 0,},
     events: {}
   });
@@ -58,6 +58,29 @@ onload=function(){
   var cube = document.getElementById("cube");
   current.player.playVideo();
 
+  var requestOptions = {
+    chart:"mostPopular",
+    maxResults: 20,
+    q: "",
+    regionCode:"JP",
+    type: "video",
+    part: "snippet"
+  };
+  gapi.client.setApiKey("AIzaSyC3VBRnfUU9_qO1Gr1ARBO8BZLT-Sp6vFc");
+  var request=gapi.client.request({
+    mine:"",
+    path:"/youtube/v3/videos",
+    params:requestOptions
+  });
+  request.execute(function(res) {
+    if(res.error){
+      console.log(res.error.message);
+    }else{
+      console.log(res.items);
+      v_list = res.items;
+    }
+  });
+
   document.getElementById("next").onclick = function() {
     if( page_num < v_list.length-1 ){
       current.next.player.playVideo();
@@ -66,7 +89,7 @@ onload=function(){
       cube.style.webkitTransform = "rotateY("+ angle +"deg)";
       current.player.pauseVideo();
       current = current.next;
-      current.next.player.cueVideoById({videoId: v_list[page_num]});
+      current.next.player.cueVideoById({videoId: v_list[page_num].id});
     }
   };
 
